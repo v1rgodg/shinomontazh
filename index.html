@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Шиномонтаж на Южной, Люберцы</title>
+<meta name="description" content="Шиномонтаж в Люберцах, Южная ул., 32А, стр. 1. Переобувка, балансировка, ремонт проколов, хранение шин. Рейтинг 5,0 на Яндекс Картах.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;700;800&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --asphalt:#2B2F33;
+    --asphalt-2:#363B40;
+    --concrete:#E3E5E4;
+    --paper:#F7F8F7;
+    --line:#C9CCCB;
+    --sign:#F2C230;
+    --sign-ink:#2B2F33;
+    --muted:#5E656B;
+    --display:"Tektur", "Arial Narrow", sans-serif;
+    --body:"Golos Text", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--concrete);color:var(--asphalt);font:400 17px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--sign);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* top bar */
+  .top{background:var(--asphalt);color:var(--paper)}
+  .top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;flex-wrap:wrap}
+  .brand{font:700 18px/1 var(--display);letter-spacing:.01em;text-decoration:none}
+  .top-phone{font:600 16px/1 var(--body);text-decoration:none;color:var(--sign)}
+
+  /* hero */
+  .hero{background:var(--asphalt);color:var(--paper);position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) 140px;gap:48px;padding-top:56px;padding-bottom:72px}
+  .hero h1{font:800 clamp(40px,6.4vw,76px)/1.02 var(--display);margin:0 0 24px;max-width:13ch}
+  .hero p.lead{font-size:19px;color:#C5CACE;margin:0 0 36px;max-width:46ch}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn-call{display:inline-flex;flex-direction:column;background:var(--sign);color:var(--sign-ink);text-decoration:none;padding:14px 26px 16px;border-radius:6px;border:3px solid var(--sign-ink);box-shadow:0 0 0 3px var(--sign)}
+  .btn-call small{font:600 13px/1.2 var(--body)}
+  .btn-call span{font:700 26px/1.15 var(--display)}
+  .btn-route{color:var(--paper);font-weight:500;padding:14px 4px;text-underline-offset:5px}
+  .rating{margin-top:44px;display:flex;align-items:baseline;gap:12px;color:#C5CACE;font-size:15px}
+  .rating b{font:700 22px/1 var(--display);color:var(--paper)}
+  .stars{color:var(--sign);letter-spacing:2px;font-size:16px}
+
+  /* tread: the one bold element */
+  .tread{align-self:stretch;min-height:420px;border-radius:18px;background-color:#1E2124;
+    background-image:
+      linear-gradient(135deg, transparent 0 38%, #3D4247 38% 62%, transparent 62%),
+      linear-gradient(45deg, transparent 0 38%, #3D4247 38% 62%, transparent 62%);
+    background-size:70px 56px, 70px 56px;
+    background-position:0 0, 0 0;
+    background-repeat:repeat-y;
+    box-shadow:inset 10px 0 0 #1E2124, inset -10px 0 0 #1E2124;
+  }
+  .tread{background-image:
+      linear-gradient(135deg, transparent 0 40%, #3D4247 40% 60%, transparent 60%),
+      linear-gradient(225deg, transparent 0 40%, #3D4247 40% 60%, transparent 60%);
+    background-size:70px 52px,70px 52px;
+    background-position:left top,right top;
+  }
+
+  /* sections */
+  section.block{padding:80px 0}
+  h2{font:700 clamp(28px,3.6vw,40px)/1.1 var(--display);margin:0 0 12px}
+  .sub{color:var(--muted);margin:0 0 40px;max-width:58ch}
+
+  /* season strip */
+  .season{background:var(--sign);color:var(--sign-ink)}
+  .season .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap}
+  .season p{margin:0;max-width:70ch}
+  .season a{font-weight:600;text-underline-offset:4px;white-space:nowrap}
+
+  /* problems: a two-column list, not cards */
+  .problems{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;border-top:2px solid var(--asphalt)}
+  .pr{padding:22px 0;border-bottom:1px solid var(--line);display:grid;gap:4px}
+  .pr b{font:700 20px/1.2 var(--display)}
+  .pr span{color:var(--muted);max-width:44ch}
+
+  /* photo slot */
+  .photo-slot{margin-top:40px;border:2px dashed var(--muted);border-radius:10px;min-height:220px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:24px}
+
+  .photos{margin-top:40px;display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+  .ph{margin:0;border-radius:10px;overflow:hidden;background:var(--line);position:relative;aspect-ratio:3/4}
+  .ph.wide{aspect-ratio:auto}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .ph figcaption{position:absolute;left:12px;bottom:12px;background:var(--asphalt);color:var(--paper);font-size:14px;padding:6px 10px;border-radius:6px}
+  @media (max-width:860px){.photos{grid-template-columns:1fr 1fr}.ph.wide{grid-column:1/-1;aspect-ratio:16/9}}
+  /* price board */
+  .board{background:var(--paper);border:2px solid var(--asphalt);border-radius:10px;padding:8px 32px;max-width:820px}
+  .row{display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:0}
+  .row .name{font-weight:500}
+  .row .name small{display:block;color:var(--muted);font-size:14px;font-weight:400}
+  .row .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-5px);min-width:24px}
+  .row .price{font:700 19px/1 var(--display);white-space:nowrap}
+  .row .price.ask{font:500 15px/1 var(--body);color:var(--muted)}
+  .board-note{font-size:14px;color:var(--muted);margin:16px 0 0}
+
+  /* facts strip */
+  .facts{background:var(--asphalt-2);color:var(--paper)}
+  .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .fact{padding:28px 20px;border-left:1px solid #4A5056}
+  .fact:first-child{border-left:0;padding-left:0}
+  .fact b{display:block;font:700 18px/1.2 var(--display);margin-bottom:4px}
+  .fact span{color:#B9BEC2;font-size:15px}
+
+  /* reviews */
+  .reviews{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:start}
+  blockquote{margin:0;background:var(--paper);border-radius:10px;padding:28px 30px}
+  blockquote p{margin:0 0 16px}
+  blockquote footer{color:var(--muted);font-size:14px}
+  .reviews .big p{font-size:21px;line-height:1.45}
+  .reviews .stack{display:grid;gap:28px}
+  .more{display:inline-block;margin-top:28px;font-weight:500;text-underline-offset:5px}
+
+  /* where */
+  .where{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:stretch}
+  .where dl{margin:0}
+  .where dt{font-size:14px;color:var(--muted);margin-top:22px}
+  .where dt:first-child{margin-top:0}
+  .where dd{margin:4px 0 0;font-weight:500;font-size:18px}
+  .map{border:2px solid var(--asphalt);border-radius:10px;overflow:hidden;min-height:340px;background:var(--line)}
+  .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+
+  footer.site{background:var(--asphalt);color:#B9BEC2;font-size:14px;padding:32px 0 96px}
+  footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  /* mobile call bar */
+  .callbar{display:none}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;padding-top:40px;padding-bottom:0}
+    .tread{min-height:56px;border-radius:12px 12px 0 0;margin:0 -24px;background-repeat:repeat-x;
+      background-image:
+        linear-gradient(45deg, transparent 0 40%, #3D4247 40% 60%, transparent 60%),
+        linear-gradient(-45deg, transparent 0 40%, #3D4247 40% 60%, transparent 60%);
+      background-size:52px 28px,52px 28px;background-position:left top,left bottom;box-shadow:none}
+    .facts .wrap{grid-template-columns:1fr 1fr}
+    .fact{border-left:0;padding-left:0;border-top:1px solid #4A5056}
+    .reviews,.where,.problems{grid-template-columns:1fr}
+    .board{padding:4px 18px}
+    .row{flex-wrap:wrap}
+    .row .dots{display:none}
+    .row .price{width:100%}
+    section.block{padding:56px 0}
+    .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:10;gap:10px}
+    .callbar a{flex:1;text-align:center;text-decoration:none;border-radius:8px;padding:14px 10px;font-weight:600}
+    .callbar .c{background:var(--sign);color:var(--sign-ink);border:2px solid var(--sign-ink)}
+    .callbar .r{background:var(--asphalt);color:var(--paper)}
+    .top-phone{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Шиномонтаж на Южной</a>
+    <a class="top-phone" href="tel:+79858890900">+7 985 889-09-00</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Переобуем, заклеим прокол, отбалансируем</h1>
+        <p class="lead">Шиномонтаж в Люберцах на Южной улице, 32А. Мастер разберётся даже с тем, что не смогли сделать в другом сервисе.</p>
+        <div class="actions">
+          <a class="btn-call" href="tel:+79858890900"><small>Позвонить и записаться</small><span>+7 985 889-09-00</span></a>
+          <a class="btn-route" href="https://yandex.ru/maps/org/tire_shop/160270517628/" target="_blank" rel="noopener">Построить маршрут</a>
+        </div>
+        <div class="rating">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <b>5,0</b>
+          <span>на Яндекс Картах, 142 оценки</span>
+        </div>
+      </div>
+      <div class="tread" role="presentation"></div>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap">
+      <div class="fact"><b>Оплата картой</b><span>можно не искать банкомат</span></div>
+      <div class="fact"><b>Бесплатный Wi-Fi</b><span>пока ждёте машину</span></div>
+      <div class="fact"><b>Хранение шин</b><span>до следующего сезона</span></div>
+      <div class="fact"><b>Работаем до 22:00</b><span>удобно после работы</span></div>
+    </div>
+  </div>
+
+  <div class="season">
+    <div class="wrap">
+      <p><b>Сезон переобувки на зимнюю резину.</b> Позвоните заранее, чтобы приехать к назначенному времени и не ждать в очереди.</p>
+      <a href="tel:+79858890900">Записаться</a>
+    </div>
+  </div>
+
+  <section class="block" id="problems">
+    <div class="wrap">
+      <h2>С чем к нам приезжают</h2>
+      <p class="sub">Если узнали свою ситуацию, звоните. Большинство таких проблем мастер решает в тот же день.</p>
+      <div class="problems">
+        <div class="pr"><b>Колесо спускает</b><span>Найдём прокол или утечку по борту, заклеим, промажем и проверим.</span></div>
+        <div class="pr"><b>Руль бьёт на скорости</b><span>Балансировка и прокатка диска, если его повело после ямы.</span></div>
+        <div class="pr"><b>Потеряли ключ от секреток</b><span>Снимем колёсные секретки без ключа и без вреда для диска.</span></div>
+        <div class="pr"><b>Пора менять резину</b><span>Переобуем все четыре колеса, а летний комплект можно оставить на хранение.</span></div>
+        <div class="pr"><b>Диск погнулся или облез</b><span>Прокатаем и покрасим, чтобы колесо снова выглядело и ехало ровно.</span></div>
+        <div class="pr"><b>Старые шины некуда деть</b><span>Примем на утилизацию, не придётся везти на свалку.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="prices" style="padding-top:0">
+    <div class="wrap">
+      <h2>Услуги и цены</h2>
+      <p class="sub">Точная стоимость зависит от радиуса и типа шин. Позвоните, назовите машину и размер колёс, и мастер сразу скажет цену.</p>
+      <div class="board">
+        <div class="row"><span class="name">Переобувка всех колёс<small>снятие, монтаж, балансировка</small></span><span class="dots"></span><span class="price">1 500 – 6 000 ₽</span></div>
+        <div class="row"><span class="name">Балансировка</span><span class="dots"></span><span class="price ask">по телефону</span></div>
+        <div class="row"><span class="name">Ремонт проколов и вулканизация</span><span class="dots"></span><span class="price ask">по телефону</span></div>
+        <div class="row"><span class="name">Сезонное хранение шин</span><span class="dots"></span><span class="price ask">по телефону</span></div>
+        <div class="row"><span class="name">Прокатка дисков</span><span class="dots"></span><span class="price ask">по телефону</span></div>
+        <div class="row"><span class="name">Покраска дисков</span><span class="dots"></span><span class="price ask">по телефону</span></div>
+        <div class="row"><span class="name">Утилизация старых шин</span><span class="dots"></span><span class="price ask">по телефону</span></div>
+      </div>
+      <p class="board-note">Бывают скидки и спецпредложения, уточняйте при звонке.</p>
+    </div>
+  </section>
+
+  <section class="block" id="reviews" style="padding-top:0">
+    <div class="wrap">
+      <h2>Что пишут клиенты</h2>
+      <p class="sub">106 отзывов на Яндекс Картах. Вот несколько из них.</p>
+      <div class="reviews">
+        <blockquote class="big">
+          <p>Самый лучший шиномонтаж на районе. Всегда обращаюсь только к этому мастеру, он профессионал своего дела. Работает быстро, качественно и не дорого.</p>
+          <footer>Татьяна, октябрь</footer>
+        </blockquote>
+        <div class="stack">
+          <blockquote>
+            <p>В другой шиномонтажке не смогли ничего сделать. Тут мастер снял всё за 5 минут, поправил диск, всё теперь идеально.</p>
+            <footer>Виктор, сентябрь</footer>
+          </blockquote>
+          <blockquote>
+            <p>Спускали все 4 колеса. Мастер Давид всё снял, промазал, сделал балансировку и объяснил, что делать дальше. Справился за час.</p>
+            <footer>Марина, февраль</footer>
+          </blockquote>
+        </div>
+      </div>
+      <a class="more" href="https://yandex.ru/maps/org/tire_shop/160270517628/reviews/" target="_blank" rel="noopener">Читать все отзывы на Яндекс Картах</a>
+    </div>
+  </section>
+
+  <section class="block" id="where" style="padding-top:0">
+    <div class="wrap">
+      <h2>Как нас найти</h2>
+      <p class="sub">Приезжайте без записи или позвоните заранее, чтобы не ждать.</p>
+      <div class="where">
+        <dl>
+          <dt>Адрес</dt><dd>Люберцы, Южная ул., 32А, стр. 1</dd>
+          <dt>Остановка</dt><dd>«Южная улица», 600 метров пешком</dd>
+          <dt>Телефон</dt><dd><a href="tel:+79858890900">+7 985 889-09-00</a></dd>
+          <dt>Время работы</dt><dd>До 22:00, точный график уточняйте по телефону</dd>
+        </dl>
+        <div class="map">
+          <iframe title="Шиномонтаж на карте" loading="lazy"
+            src="https://yandex.ru/map-widget/v1/?ll=37.900859%2C55.664919&z=16&pt=37.900859%2C55.664919%2Cpm2rdm"></iframe>
+        </div>
+      </div>
+      <div class="photos">
+        <figure class="ph wide"><img src="https://avatars.mds.yandex.net/get-altay/7779554/2a000001866e747e3928863c2f35fec10cbf/XXXL" alt="Жёлтый бокс шиномонтажа с вывеской на Южной улице" loading="lazy"><figcaption>Ищите жёлтый бокс с красной вывеской</figcaption></figure>
+        <figure class="ph"><img src="https://avatars.mds.yandex.net/get-altay/1359533/2a000001866e7458e8c6cf26f58ca9802bed/XXXL" alt="Литой диск на балансировочном станке" loading="lazy"></figure>
+        <figure class="ph"><img src="https://avatars.mds.yandex.net/get-altay/16368192/2a0000019afd32d4618cbd67043dad52b209/XXXL" alt="Автомобиль на домкрате во время переобувки" loading="lazy"></figure>
+      </div>
+      <p class="board-note">Фото с Яндекс Карт.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>Шиномонтаж на Южной, Люберцы</span>
+    <span>Демо-версия сайта, подготовлена для владельца</span>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Быстрые действия">
+  <a class="c" href="tel:+79858890900">Позвонить</a>
+  <a class="r" href="https://yandex.ru/maps/org/tire_shop/160270517628/" target="_blank" rel="noopener">Маршрут</a>
+</nav>
+
+</body>
+</html>
