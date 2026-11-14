@@ -127,7 +127,10 @@
   .where dt:first-child{margin-top:0}
   .where dd{margin:4px 0 0;font-weight:500;font-size:18px}
   .map{border:2px solid var(--asphalt);border-radius:10px;overflow:hidden;min-height:340px;background:var(--line)}
+  .map{display:block;position:relative}
   .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+  .map img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}
+  .map-hint{position:absolute;right:12px;bottom:12px;background:var(--sign);color:var(--sign-ink);font-weight:600;font-size:14px;padding:8px 12px;border-radius:6px;border:2px solid var(--sign-ink)}
 
   footer.site{background:var(--asphalt);color:#B9BEC2;font-size:14px;padding:32px 0 96px}
   footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
@@ -271,12 +274,12 @@
           <dt>Время работы</dt><dd>До 22:00, точный график уточняйте по телефону</dd>
         </dl>
         <div class="map">
-          <iframe title="Шиномонтаж на карте" loading="lazy"
-            src="https://yandex.ru/map-widget/v1/?ll=37.900859%2C55.664919&z=16&pt=37.900859%2C55.664919%2Cpm2rdm"></iframe>
+          <iframe title="Шиномонтаж на Яндекс Картах" loading="lazy"
+            src="https://yandex.ru/map-widget/v1/org/tire_shop/160270517628/?z=16"></iframe>
         </div>
       </div>
       <div class="photos">
-        <figure class="ph wide"><img src="https://avatars.mds.yandex.net/get-altay/7779554/2a000001866e747e3928863c2f35fec10cbf/XXXL" alt="Жёлтый бокс шиномонтажа с вывеской на Южной улице" loading="lazy"><figcaption>Ищите жёлтый бокс с красной вывеской</figcaption></figure>
+        <figure class="ph wide"><img src="https://avatars.mds.yandex.net/get-altay/7779554/2a000001866e747e3928863c2f35fec10cbf/XXXL" alt="Жёлтый бокс шиномонтажа с вывеской на Южной улице" loading="lazy"></figure>
         <figure class="ph"><img src="https://avatars.mds.yandex.net/get-altay/1359533/2a000001866e7458e8c6cf26f58ca9802bed/XXXL" alt="Литой диск на балансировочном станке" loading="lazy"></figure>
         <figure class="ph"><img src="https://avatars.mds.yandex.net/get-altay/16368192/2a0000019afd32d4618cbd67043dad52b209/XXXL" alt="Автомобиль на домкрате во время переобувки" loading="lazy"></figure>
       </div>
